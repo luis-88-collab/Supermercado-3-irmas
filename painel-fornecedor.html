@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>3 Irmãs | Portal do Fornecedor</title>
+    <link rel="stylesheet" href="css/painel-fornecedor.css">
+</head>
+
+<body>
+    <div class="pagina">
+
+        <header>
+            <h1>Supermercado 3 Irmãs</h1>
+            <p>Portal do Fornecedor</p>
+        </header>
+
+        <main>
+
+            <section class="solicitacoes">
+
+    <h2>Solicitações Recebidas</h2>
+    <p>Consulte as cotações enviadas pelo supermercado.</p>
+
+    <div class="pedido">
+        <div>
+            <h3>Cotação #004</h3>
+            <p>3 produtos solicitados</p>
+            <p>Prazo para resposta: 20/10/2026</p>
+            <span class="pendente">Pendente</span>
+        </div>
+
+        <a href="#cotacao-004" class="responder">
+            Responder Cotação
+        </a>
+    </div>
+
+    <div class="pedido">
+        <div>
+            <h3>Cotação #001</h3>
+            <p>3 produtos solicitados</p>
+            <span class="respondida">Respondida</span>
+        </div>
+    </div>
+
+</section>
+            <section class="solicitacao" id="cotacao-004">
+
+                <div class="topo-cotacao">
+                    <div>
+                        <h2>Cotação #004</h2>
+                        <p>Fornecedor B</p>
+                    </div>
+
+                    <span class="status">Pendente</span>
+                </div>
+
+                <p class="instrucao">
+                    Informe os preços e as quantidades
+                    disponíveis para fornecimento.
+                </p>
+
+                <form>
+
+                    <div class="produto">
+                        <h3>Produto 1 - Arroz branco 5 kg</h3>
+                        <p>Quantidade solicitada: 20 unidades</p>
+
+                        <div class="campos">
+                            <div>
+                                <label for="preco1">
+                                    Preço unitário (R$)
+                                </label>
+                                <input type="number" id="preco1"
+                                       min="0" step="0.01"
+                                       value="23.00">
+                            </div>
+
+                            <div>
+                                <label for="estoque1">
+                                    Estoque disponível
+                                </label>
+                                <input type="number" id="estoque1"
+                                       min="0" value="30">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="produto">
+                        <h3>Produto 2 - Feijão carioca 1 kg</h3>
+                        <p>Quantidade solicitada: 15 unidades</p>
+
+                        <div class="campos">
+                            <div>
+                                <label for="preco2">
+                                    Preço unitário (R$)
+                                </label>
+                                <input type="number" id="preco2"
+                                       min="0" step="0.01"
+                                       value="8.50">
+                            </div>
+
+                            <div>
+                                <label for="estoque2">
+                                    Estoque disponível
+                                </label>
+                                <input type="number" id="estoque2"
+                                       min="0" value="18">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="produto">
+                        <h3>Produto 3 - Óleo de soja 900 ml</h3>
+                        <p>Quantidade solicitada: 12 unidades</p>
+
+                        <div class="campos">
+                            <div>
+                                <label for="preco3">
+                                    Preço unitário (R$)
+                                </label>
+                                <input type="number" id="preco3"
+                                       min="0" step="0.01"
+                                       value="6.70">
+                            </div>
+
+                            <div>
+                                <label for="estoque3">
+                                    Estoque disponível
+                                </label>
+                                <input type="number" id="estoque3"
+                                       min="0" value="15">
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Condições de fornecimento</h3>
+
+                    <label for="frete">Valor do frete (R$)</label>
+                    <input type="number" id="frete"
+                           min="0" step="0.01"
+                           value="25.00">
+
+                    <label for="entrega">Prazo de entrega</label>
+                    <input type="date" id="entrega">
+
+                    <label for="observacoes">Observações</label>
+                    <textarea id="observacoes"
+                        placeholder="Descontos, pagamento e outras condições..."></textarea>
+
+                    <details class="envio-proposta">
+
+                         <summary>Enviar Proposta</summary>
+
+                            <p class="mensagem-sucesso">
+                                 ✓ Proposta enviada com sucesso!
+                            </p>
+
+                            <a href="index.html" class="sair">
+                                  Sair do Sistema
+                            </a>
+
+                    </details>
+
+                </form>
+            </section>
+        </main>
+
+    </div>
+</body>
+</html>

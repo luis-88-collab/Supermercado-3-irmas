@@ -1,0 +1,228 @@
+:root {
+    --azul: #2864A0;
+    --laranja: #E65032;
+    --branco: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #FAFAFA;
+    font-family: Arial, sans-serif;
+}
+
+.pagina {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #F0F4F8;
+    border: 1px solid #DDE3E9;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+header {
+    background-color: var(--azul);
+    color: var(--branco);
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+    font-size: 17px;
+}
+
+main {
+    padding: 24px;
+}
+
+.form-cotacao {
+    background-color: var(--branco);
+    padding: 25px;
+    border-radius: 18px;
+}
+
+.form-cotacao h2 {
+    color: var(--azul);
+    margin-top: 0;
+}
+
+.form-cotacao h3 {
+    color: var(--azul);
+    margin-top: 30px;
+}
+
+.form-cotacao p {
+    color: #606060;
+}
+
+.form-cotacao label {
+    display: block;
+    color: var(--azul);
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-cotacao input:not([type="checkbox"]),
+.form-cotacao select,
+.form-cotacao textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.produto {
+    background-color: #F6F8FA;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.fornecedores {
+    background-color: #F6F8FA;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.fornecedores label {
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.fornecedores input {
+    accent-color: var(--laranja);
+    margin-right: 10px;
+}
+
+.form-cotacao textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.form-cotacao button {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--laranja);
+    color: var(--branco);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.form-cotacao button:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .form-cotacao {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+}
+
+.notificacoes {
+    background-color: #EAF5FF;
+    border: 1px solid #D5E5F5;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.notificacoes label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.notificacoes label:last-child {
+    margin-bottom: 0;
+}
+
+.notificacoes input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: var(--laranja);
+}
+
+.envio-solicitacao summary {
+    display: block;
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    transition: transform 0.3s ease;
+}
+
+.envio-solicitacao summary::-webkit-details-marker {
+    display: none;
+}
+
+.envio-solicitacao summary:hover {
+    transform: scale(1.03);
+}
+
+.envio-solicitacao .mensagem-sucesso {
+    background-color: #E8F5E9;
+    color: #21834B;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.form-cotacao .botao-adicionar {
+    display: block;
+    width: 100%;
+    background-color: var(--branco);
+    color: var(--azul);
+    border: 2px solid var(--azul);
+    border-radius: 8px;
+    padding: 14px;
+    margin: 10px 0 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.form-cotacao .botao-adicionar:hover {
+    background-color: #EAF5FF;
+    color: var(--laranja);
+    border-color: var(--laranja);
+    transform: scale(1.02);
+}

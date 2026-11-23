@@ -1,0 +1,188 @@
+:root {
+    --azul: #2864A0;
+    --laranja: #E65032;
+    --branco: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #FAFAFA;
+    font-family: Arial, sans-serif;
+}
+
+.pagina {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: #F0F4F8;
+    border: 1px solid #DDE3E9;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Cabeçalho */
+
+header {
+    background-color: var(--azul);
+    color: var(--branco);
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+    font-size: 17px;
+}
+
+/* Formulário */
+
+main {
+    padding: 24px;
+}
+
+.form-produtos {
+    background-color: var(--branco);
+    padding: 25px;
+    border-radius: 18px;
+}
+
+.form-produtos h2 {
+    color: var(--azul);
+    margin-top: 0;
+}
+
+.form-produtos > p {
+    color: #606060;
+    margin-bottom: 25px;
+}
+
+.produto {
+    background-color: #F6F8FA;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.produto h3 {
+    color: var(--azul);
+    margin-top: 0;
+}
+
+.produto label {
+    display: block;
+    color: #606060;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.produto input,
+.produto select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 16px;
+}
+
+.linha-campos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* Adicionar produto */
+
+.mais-produtos summary {
+    padding: 15px;
+    border: 1px solid var(--azul);
+    border-radius: 8px;
+    color: var(--azul);
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.mais-produtos summary::-webkit-details-marker {
+    display: none;
+}
+
+.mais-produtos summary:hover {
+    background-color: #EAF5FF;
+    color: var(--laranja);
+}
+
+.mais-produtos[open] .produto {
+    margin-top: 10px;
+}
+
+/* Botão principal */
+
+.botao-salvar {
+    display: block;
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.botao-salvar:hover {
+    transform: scale(1.03);
+}
+
+/* Voltar */
+
+.voltar {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--azul);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.voltar:hover {
+    color: var(--laranja);
+    text-decoration: underline;
+}
+
+/* Celulares */
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .form-produtos {
+        padding: 18px;
+    }
+
+    .linha-campos {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+}

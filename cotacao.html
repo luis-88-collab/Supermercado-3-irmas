@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado 3 irmãs | Solicitação de Cotação</title>
+    <link rel="stylesheet" href="css/cotacao.css">
+    <link rel="stylesheet" href="css/navegacao.css">
+</head>
+<body>
+    <div class="pagina">
+
+        <header>
+            <h1>Supermercado 3 irmãs</h1>
+            <p>Solicitação</p>
+        </header>
+
+        <main>
+            <form class="form-cotacao">
+
+                <h2>Nova Solicitação</h2>
+
+                <p>Informe os produtos,quantidades e fornecedores</p>
+
+                <h3>Produtos solicitados</h3>
+
+                <div class="produto">
+                    <label for="produto">Produto 1</label>
+                    <input type="text" id="produto1"
+                    value="Arroz branco 5 kg">
+
+                    <label for="quantidade">Quantidade</label>
+                    <input type="number" id="quantidade"
+                    min="1" value="20">
+
+                    <label for="unidade">Unidade</label>
+                    <select id="unidade">
+                        <option>Pacotes</option>
+                        <option>Unidades</option>
+                        <option>Caixas</option>
+                        <option>Quilos</option>
+                    </select>
+                </div>
+
+                <div class="produto">
+                    <label for="produto2">Produto 2</label>
+                    <input type="text" id="produto2"
+                    value="Feijao carioca 1 kg">
+
+                 <label for="quantidade2">Quantidade 2</label>
+                    <input type="number" id="quantidade2"
+                    min="1" value="15">
+
+                    <label for="unidade2">Unidade</label>
+                    <select id="unidade2">
+                        <option>Pacotes</option>
+                        <option>Unidades</option>
+                        <option>Caixas</option>
+                        <option>Quilos</option>
+                    </select>   
+
+                    <div id="produtos-adicionados"></div>
+
+<button type="button" id="adicionar-produto"
+        class="botao-adicionar">
+    + Adicionar Produto
+</button>
+
+                   
+
+                    <h3>Selecionar fornecedores</h3>
+
+                    <div class="fornecedores">
+                        <label>
+                            <input type="checkbox" checked>Fornecedor A
+                        </label>
+
+                        <label>
+                            <input type="checkbox" checked>Fornecedor B
+                        </label>
+
+                        <label>
+                            <input type="checkbox" checked>Fornecedor C
+                        </label>
+                    </div>
+
+                    <h3>Enviar notificação por:</h3>
+
+                    <div class="notificacoes">
+                       <label>
+                           <input type="checkbox" name="notificacao"
+                           value="whatsapp" checked>
+                           WhatsApp
+                       </label>
+
+                     <label>
+                           <input type="checkbox" name="notificacao"
+               value="email" checked>
+        E-mail
+                      </label>
+                    </div>
+                        
+                        <label for="prazo">Prazo para resposta:</label>
+                        <input type="date" id="prazo">
+
+                        <label for="observacoes">Observações:</label>
+                        <textarea id="observacoes" 
+                        placeholder="informacoes adicionais"></textarea>
+
+                        <details class="envio-solicitacao">
+
+    <summary>Enviar Solicitação</summary>
+
+    <p class="mensagem-sucesso">
+        ✓ Solicitação enviada com sucesso!
+    </p>
+
+</details>
+
+            </form>
+
+            <a href="index.html" class="voltar">
+             &larr; Voltar ao Login
+        </a>
+        
+        </main>
+
+    </div>
+
+    <script>
+    let numeroProduto = 3;
+
+    const botao = document.getElementById("adicionar-produto");
+    const area = document.getElementById("produtos-adicionados");
+
+    botao.addEventListener("click", function() {
+
+        const novoProduto = document.createElement("div");
+        novoProduto.className = "produto";
+
+        novoProduto.innerHTML = `
+            <label for="produto${numeroProduto}">
+                Produto ${numeroProduto}
+            </label>
+
+            <input type="text"
+                   id="produto${numeroProduto}"
+                   placeholder="Nome do produto">
+
+            <label for="quantidade${numeroProduto}">
+                Quantidade
+            </label>
+
+            <input type="number"
+                   id="quantidade${numeroProduto}"
+                   min="1">
+
+            <label for="unidade${numeroProduto}">
+                Unidade
+            </label>
+
+            <select id="unidade${numeroProduto}">
+                <option>Unidades</option>
+                <option>Pacotes</option>
+                <option>Caixas</option>
+                <option>Quilos</option>
+            </select>
+        `;
+
+        area.appendChild(novoProduto);
+
+        numeroProduto++;
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+:root {
+    --azul: #2864A0;
+    --laranja: #E65032;
+    --branco: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #FAFAFA;
+    font-family: Arial, sans-serif;
+}
+
+.pagina {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #F0F4F8;
+    border: 1px solid #DDE3E9;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+header {
+    background-color: var(--azul);
+    color: var(--branco);
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+    font-size: 17px;
+}
+
+main {
+    padding: 24px;
+}
+
+.historico {
+    background-color: var(--branco);
+    padding: 25px;
+    border-radius: 18px;
+}
+
+.historico h2 {
+    color: var(--azul);
+    margin-top: 0;
+}
+
+.historico p {
+    color: #606060;
+}
+
+/* Tabela */
+
+.tabela-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th {
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 15px;
+    text-align: center;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+tbody tr:hover {
+    background-color: #EAF5FF;
+}
+
+/* Situações das cotações */
+
+.aguardando {
+    color: #A66B00;
+    font-weight: bold;
+}
+
+.comparada {
+    color: var(--azul);
+    font-weight: bold;
+}
+
+.aprovada {
+    color: #21834B;
+    font-weight: bold;
+}
+
+/* Botões */
+
+button {
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.observacao {
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .historico {
+        padding: 15px;
+    }
+
+    table {
+        min-width: 800px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+}

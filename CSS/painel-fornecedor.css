@@ -1,0 +1,319 @@
+:root {
+    --azul: #2864A0;
+    --laranja: #E65032;
+    --branco: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #FAFAFA;
+    font-family: Arial, sans-serif;
+}
+
+.pagina {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: #F0F4F8;
+    border: 1px solid #DDE3E9;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Cabeçalho */
+
+header {
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+    font-size: 17px;
+}
+
+/* Conteúdo */
+
+main {
+    padding: 24px;
+}
+
+.solicitacao {
+    background-color: var(--branco);
+    padding: 25px;
+    border-radius: 18px;
+}
+
+.topo-cotacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.topo-cotacao h2 {
+    color: var(--azul);
+    margin: 0;
+}
+
+.topo-cotacao p {
+    color: #606060;
+}
+
+.status {
+    background-color: #FFF0D6;
+    color: #A66B00;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.instrucao {
+    color: #606060;
+    margin-bottom: 25px;
+}
+
+/* Produtos */
+
+.produto {
+    background-color: #F6F8FA;
+    border: 1px solid #E0E5EB;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 18px;
+}
+
+.produto h3 {
+    color: var(--azul);
+    margin-top: 0;
+}
+
+.produto p {
+    color: #606060;
+    font-size: 14px;
+}
+
+.campos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* Formulário */
+
+form h3 {
+    color: var(--azul);
+}
+
+form label {
+    display: block;
+    color: #606060;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: 2px solid var(--azul);
+}
+
+form textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+/* Botão */
+
+button {
+    background-color: var(--laranja);
+    color: var(--branco);
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .solicitacao {
+        padding: 15px;
+    }
+
+    .campos {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+}
+
+.solicitacoes {
+    background-color: var(--branco);
+    padding: 25px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+}
+
+.solicitacoes h2,
+.pedido h3 {
+    color: var(--azul);
+}
+
+.solicitacoes p {
+    color: #606060;
+}
+
+.pedido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    background-color: #F6F8FA;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.pedido h3 {
+    margin-top: 0;
+}
+
+.pendente {
+    color: #A66B00;
+    font-weight: bold;
+}
+
+.respondida {
+    color: #21834B;
+    font-weight: bold;
+}
+
+.responder {
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.responder:hover {
+    transform: scale(1.05);
+}
+
+#cotacao-004 {
+    scroll-margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .pedido {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.solicitacao {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    transition: max-height 0.7s ease,
+                opacity 0.4s ease,
+                padding 0.7s ease;
+}
+
+.solicitacao:target {
+    max-height: 3500px;
+    opacity: 1;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.envio-proposta summary {
+    display: block;
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    transition: transform 0.3s ease;
+}
+
+.envio-proposta summary:hover {
+    transform: scale(1.03);
+}
+
+.mensagem-sucesso {
+    background-color: #E8F5E9;
+    color: #21834B;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.sair {
+    display: block;
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
+}
+
+.sair:hover {
+    background-color: var(--laranja);
+    transform: scale(1.03);
+}

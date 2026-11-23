@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>3 Irmãs | Cadastro de Produtos</title>
+    <link rel="stylesheet" href="css/cadastro-produtos.css">
+</head>
+
+<body>
+    <div class="pagina">
+
+        <header>
+            <h1>Supermercado 3 Irmãs</h1>
+            <p>Cadastro de Produtos</p>
+        </header>
+
+        <main>
+            <form class="form-produtos">
+
+                <h2>Meus Produtos</h2>
+                <p>
+                    Informe os produtos comercializados
+                    pela sua empresa.
+                </p>
+
+                <section class="produto">
+                    <h3>Produto 1</h3>
+
+                    <label for="produto1">Nome do produto</label>
+                    <input type="text" id="produto1"
+                           value="Arroz branco 5 kg">
+
+                    <label for="categoria1">Categoria</label>
+                    <select id="categoria1">
+                        <option selected>Alimentos</option>
+                        <option>Bebidas</option>
+                        <option>Limpeza</option>
+                        <option>Higiene pessoal</option>
+                        <option>Outros</option>
+                    </select>
+
+                    <div class="linha-campos">
+                        <div>
+                            <label for="preco1">Preço (R$)</label>
+                            <input type="number" id="preco1"
+                                   min="0" step="0.01"
+                                   value="23.00">
+                        </div>
+
+                        <div>
+                            <label for="estoque1">
+                                Quantidade disponível
+                            </label>
+                            <input type="number" id="estoque1"
+                                   min="0" value="30">
+                        </div>
+                    </div>
+
+                    <label for="unidade1">Unidade de venda</label>
+                    <select id="unidade1">
+                        <option>Pacote</option>
+                        <option>Unidade</option>
+                        <option>Caixa</option>
+                        <option>Quilo</option>
+                    </select>
+                </section>
+
+                <details class="mais-produtos">
+                    <summary>+ Adicionar outro produto</summary>
+
+                    <section class="produto">
+                        <h3>Produto 2</h3>
+
+                        <label for="produto2">Nome do produto</label>
+                        <input type="text" id="produto2"
+                               placeholder="Ex.: Feijão 1 kg">
+
+                        <label for="categoria2">Categoria</label>
+                        <select id="categoria2">
+                            <option>Alimentos</option>
+                            <option>Bebidas</option>
+                            <option>Limpeza</option>
+                            <option>Higiene pessoal</option>
+                            <option>Outros</option>
+                        </select>
+
+                        <div class="linha-campos">
+                            <div>
+                                <label for="preco2">Preço (R$)</label>
+                                <input type="number" id="preco2"
+                                       min="0" step="0.01"
+                                       placeholder="0.00">
+                            </div>
+
+                            <div>
+                                <label for="estoque2">
+                                    Quantidade disponível
+                                </label>
+                                <input type="number" id="estoque2"
+                                       min="0" placeholder="0">
+                            </div>
+                        </div>
+
+                        <label for="unidade2">
+                            Unidade de venda
+                        </label>
+                        <select id="unidade2">
+                            <option>Pacote</option>
+                            <option>Unidade</option>
+                            <option>Caixa</option>
+                            <option>Quilo</option>
+                        </select>
+                    </section>
+                </details>
+
+                <a href="painel-fornecedor.html"
+                   class="botao-salvar">
+                    Salvar Produtos e Continuar
+                </a>
+
+                <a href="fornecedores.html"
+                   class="voltar">
+                    ← Voltar ao Cadastro
+                </a>
+
+            </form>
+        </main>
+    </div>
+</body>
+</html>

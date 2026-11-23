@@ -1,0 +1,203 @@
+:root {
+    --azul: #2864A0;
+    --laranja: #E65032;
+    --branco: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #FAFAFA;
+    font-family: Arial, sans-serif;
+}
+
+.pagina {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #F0F4F8;
+    border: 1px solid #DDE3E9;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+header {
+    background-color: var(--azul);
+    color: var(--branco);
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+    font-size: 17px;
+}
+
+main {
+    padding: 24px;
+}
+
+.comparacao {
+    background-color: var(--branco);
+    padding: 25px;
+    border-radius: 18px;
+}
+
+.comparacao h2,
+.comparacao h3 {
+    color: var(--azul);
+}
+
+.comparacao p {
+    color: #606060;
+}
+
+/* Tabela */
+
+.tabela-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th {
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+tbody tr:hover {
+    background-color: #EAF5FF;
+}
+
+.melhor {
+    color: var(--laranja);
+    background-color: #FFF0EB;
+    font-weight: bold;
+}
+
+.legenda {
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+/* Resumo */
+
+.resumo {
+    background-color: #F6F8FA;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.total {
+    background-color: #EAF5FF;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.total strong {
+    display: block;
+    color: var(--azul);
+    font-size: 32px;
+}
+
+.total p {
+    font-size: 13px;
+}
+
+/* Botão */
+
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 16px;
+    background-color: var(--laranja);
+    color: var(--branco);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+/* Telas pequenas */
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .comparacao {
+        padding: 15px;
+    }
+
+    table {
+        min-width: 650px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+}
+
+.aprovacao-cotacao {
+    margin-top: 25px;
+}
+
+.aprovacao-cotacao summary {
+    display: block;
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    transition: transform 0.3s ease;
+}
+
+.aprovacao-cotacao summary::-webkit-details-marker {
+    display: none;
+}
+
+.aprovacao-cotacao summary:hover {
+    transform: scale(1.03);
+}
+
+.aprovacao-cotacao .mensagem-aprovacao {
+    background-color: #E8F5E9;
+    color: #21834B;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}

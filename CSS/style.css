@@ -1,0 +1,115 @@
+:root {
+    --azul:#2864A0;
+    --laranja:#E65032;
+    --branco:#FFFFFF;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    background-color: #F0F4F8;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: var(--azul);
+    text-align: center;
+}
+
+h2 {
+    color: var(--laranja);
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.cabeçalho {
+    background-color: var(--azul);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.cabeçalho h1 {
+    color: var(--branco);
+    font-size: 24px;
+}
+
+.cabeçalho p {
+    color: var(--branco);
+    font-size: 16px;
+}
+
+button {
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3a83cd;
+    transform: scale(1.05);
+}
+
+button {
+    transition: transform 0.1s ease;
+}
+
+.botao-login {
+    display: block;
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.botao-login.secundario {
+    background-color: var(--azul);
+}
+
+.botao-login:hover {
+    transform: scale(1.05);
+}
+
+.cadastro-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--azul);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cadastro-link:hover {
+    color: var(--laranja);
+    text-decoration: underline;
+    transform: scale(1.05);
+    transition: 0.1s;
+}
